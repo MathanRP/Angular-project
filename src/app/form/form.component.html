@@ -1,0 +1,18 @@
+<div *ngFor="let f of arr">
+    <p>{{f}}</p>
+</div>
+ <input type="search" [(ngModel)]="id">
+  <div class="container">
+    <div class="inner" >
+    <div class="messagelist"*ngFor="let m of messagelist|filterItem:id"> 
+    <h1>{{m.name}}</h1>
+    <h4>{{m.calories}}</h4>
+    <img src={{m.ulr}} width="25%" height="25%" alt="wait">
+    <br>
+    <p>no of items</p>
+    <input type="number">
+    <button (click)="handler(m.name)">addtoDailymenu</button>
+    
+    </div>
+    </div>
+  </div>
